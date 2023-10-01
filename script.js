@@ -1,7 +1,8 @@
 // script.js
-require('dotenv').config(); // تحميل ملف .env
+require('dotenv').config({ path: '.env.local' });
 
-const API_KEY = process.env.API_KEY; // الحصول على مفتاح API من ملف .env
+// الحصول على مفتاح API من متغير البيئة
+const API_KEY = process.env.API_KEY;
 
 const chatInput = document.querySelector("#chat-input");
 const sendButton = document.querySelector("#send-btn");
